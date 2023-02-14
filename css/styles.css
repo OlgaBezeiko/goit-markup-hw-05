@@ -102,6 +102,7 @@ align-items: center;}
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-navy-blue-overlay-shadow-heading);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-link:hover,
 .menu-link:focus {
@@ -114,6 +115,7 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--color-slate-text);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact:not(:last-child){
@@ -137,6 +139,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 border-radius: 4px;
 border: none;
 padding: 16px 32px;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
   
 .button:hover,
@@ -265,6 +268,7 @@ border-radius: 0px 0px 4px 4px;}
   height: 40px;
   border-radius: 50%;
   background-color: var(--color-iris-focus-aktiv-link);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover,
@@ -292,18 +296,15 @@ padding-bottom: 120px;
   height: 88px;
   border-radius: 4px;
   border: 1px solid var(--color-helper);
+  fill: var(--color-helper);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .company-link:hover,
 .company-link:focus {
   fill: var(--color-ocean-hover-pressed);
   border-color: var(--color-ocean-hover-pressed);
 }
-.company-link {
-  fill: var(--color-helper);
-}
-
 
 /*================Футер=======================*/
 
@@ -369,6 +370,7 @@ padding-bottom: 120px;
       height: 40px;
       border-radius: 50%;
       background-color: rgba(225, 225, 225, 0.1);
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
   .social-list-link-footer:hover,
@@ -383,6 +385,7 @@ padding-bottom: 120px;
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
+  
 }
 
   .nav-btn:hover,
@@ -393,6 +396,7 @@ padding-bottom: 120px;
   }
 
   .nav-btn {
+  
   background-color: var(--color-cloud-accent);
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -404,6 +408,7 @@ padding-bottom: 120px;
   padding: 12px 24px;
   border: 1px solid #E7E9FC;
 border-radius: 4px;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
 .menu-portfolio-btn:not(:last-child) {
@@ -429,10 +434,41 @@ border-radius: 4px;
   flex-basis: calc((100% - 2*24px) / 3);
 }
 
+.portfolio-card:hover .overlay,
+.portfolio-card:focus .overlay{
+transform: translate(0, 0);
+}
+
+
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .portfolio-link {
   display: block;
+
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+transform: translate(0, 100%);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  color: var(--color-cloud-accent);
+  background-color: var(--color-iris-focus-aktiv-link);
+  padding-top: 40px;
+  padding-bottom: 164px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.overlay-img {
+  position: relative;
+  overflow: hidden;
 }
