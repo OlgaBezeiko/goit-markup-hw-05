@@ -97,6 +97,7 @@ align-items: center;}
   margin-right: 40px;
 }
 
+
 .menu-link {
   font-weight: 500;
   font-size: 16px;
@@ -108,6 +109,15 @@ align-items: center;}
 .menu-link:hover,
 .menu-link:focus {
   color: var(--color-ocean-hover-pressed);
+}
+
+.menu-item::after {
+  display: block;
+  content: '';
+  width: 66px;
+  height: 4px;
+  background-color: var(--color-ocean-hover-pressed);
+  border-radius: 2px;
 }
 .contact-mail-phone  {
 font-family: 'Roboto', sans-serif;
