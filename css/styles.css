@@ -113,7 +113,7 @@ align-items: center;}
   color: var(--color-ocean-hover-pressed);
 }
 
-.current:hover::after {
+.current::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -127,7 +127,7 @@ align-items: center;}
 
 .current {
   position: relative;
-  transition: background-color var(--transition);
+  color: var(--color-ocean-hover-pressed);
 }
 .contact-mail-phone  {
 font-family: 'Roboto', sans-serif;
@@ -467,6 +467,7 @@ transform: translate(0, 0);
 }
 .portfolio-link {
   display: block;
+  transition: box-shadow var(--transition);
 
 }
 
